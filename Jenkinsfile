@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // GitHub reposundan kodu çeker.
-                git 'https://github.com/spring-projects/spring-petclinic.git'
+                git credentialsId: 'github-token', url: 'https://github.com/user/repo.git'
             }
         }
         
